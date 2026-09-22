@@ -59,7 +59,7 @@
                         line-height: 1.5;
 
                         i {
-                            margin-bottom: 12px;
+                            margin: 20px;
                         }
                     }
 
@@ -84,7 +84,7 @@
     }
 .article-content{
         background-color: rgba(0, 0, 0, 0.106);
-        padding: 20px 40px;
+        padding: 40px;
         border-radius: 20px;
     }
 }
@@ -120,7 +120,7 @@
 @media (max-height: 500px) and (orientation: landscape) {
     .main-wraper .overlay .home-article {
         padding: 24px;
-        gap: 16px;
+        gap: 30px;
         
         img {
             width: 100px;
