@@ -48,7 +48,7 @@
                     <li><a href="#services">Υπηρεσίες</a></li>
                     <li><a href="#our-work">Η δουλειά μας</a></li>
                     <li><a href="#about-us">Σχετικά με εμάς</a></li> 
-                    <li><a href="">Επικοινωνία</a></li>
+                    <li><a href="#contact-us">Επικοινωνία</a></li>
                 </ul>
             </nav>
 
