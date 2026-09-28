@@ -46,7 +46,7 @@
             <nav class="main-nav">
                 <ul class="main-menu">
                     <li><a href="#services">Υπηρεσίες</a></li>
-                    <li><a href="#ourwork">Η δουλειά μας</a></li>
+                    <li><a href="#our-work">Η δουλειά μας</a></li>
                     <li><a href="#about-us">Σχετικά με εμάς</a></li> 
                     <li><a href="">Επικοινωνία</a></li>
                 </ul>

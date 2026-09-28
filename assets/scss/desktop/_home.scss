@@ -1,3 +1,4 @@
+
 .cover{
     height: 65vh;
     // background-color: red;
@@ -148,7 +149,7 @@
     .par-intro{
         color:$brand-red;
         margin-bottom: 0;
-        font-size: 12px;
+        font-size: 14px;
         font-weight: bold;
 
     }
@@ -370,3 +371,159 @@
 
     
 }
+
+.to-top-link{
+    
+    display: inline-block;
+    position: sticky;
+    left:95%;
+    bottom: 100px;
+    &:link,&:visited{
+        color: transparent;
+    }
+    i{
+        // background-color: #7b7b7b;
+        font-size: 40px;
+        color: $brand-red;
+       
+    }
+}
+
+.hidden{
+    display: none;
+}
+
+.contact-us h2{
+    margin-bottom: 10px;
+}
+// contact us section
+.contact-flex{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    
+    & > div{
+        width: 50%;
+    }
+
+    &-right{
+        border: 1px solid rgb(222, 222, 222);
+        padding: 20px 40px;
+           -webkit-box-shadow: 3px 10px 15px -1px rgba(46,46,46,0.06); 
+        box-shadow: 3px 10px 15px -1px rgba(46,46,46,0.06);
+        article{
+            text-align: right;
+            p{
+                font-size: 18px;
+            }
+            &::after{
+                content: "";
+                clear: both;
+                display: table;
+            }
+            img{
+                width: 250px;
+                height: 250px;
+                border-radius: 10%;
+                // margin-top: 40px;
+                float: left;
+                margin-right: 40px;
+            }
+
+            .contact-article-content{
+                margin-left: 20px;
+
+                .contact-channel{
+                    // text-align: left;
+
+                    i{
+                        margin-right: 10px;
+                        color: $brand-red;
+                    }
+
+                    strong{
+                        color: $brand-red;
+                    }
+                }
+            }
+        }
+
+        .social{
+            margin-top: 10px;
+            border-top: 1px solid rgb(230, 230, 230);
+            padding-top: 10px;
+            text-align: right;
+            a:link,a:visited{
+                color: transparent;
+            }
+
+            a.fb i{
+                color: blue;
+                font-size: 80px;
+            }
+
+            a.insta i{
+                color: rgb(255, 0, 102);
+                font-size: 80px;
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+// contact form
+form .flexing{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    &>*{
+        width: 50%;
+        margin: 0;
+
+        & input{
+            width: 100%;
+        }
+
+        &:not(:last-of-type){
+            margin-right: 5px;
+        }
+    }
+}
+input{
+    width: 90%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: rgb(254, 254, 254);
+
+    &:focus{
+        outline: 2px solid $brand-red;
+        border: none;
+    }
+}
+
+textarea{
+    width: 90%;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 10px;
+
+    &:focus{
+        outline: 2px solid $brand-red;
+        border: none;
+    }
+}
+
+input[type="submit"]{
+    background-color: $brand-red;
+    color: white;
+    border: none;
+    padding: 15px;
+    transition: all .4s ease-in-out;
+
+    &:hover{
+        background-color: darken($brand-red,5%);
+    }
+
+}
+

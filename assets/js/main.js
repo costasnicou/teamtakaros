@@ -1,11 +1,12 @@
 // 'use strict';
-
-
+const selectedbtn = document.querySelector('.btnAutoselect');
+const trigger = document.querySelector(".scrollTopTrigger");
+const topLink = document.querySelector('.to-top-link');
 
 document.addEventListener('DOMContentLoaded',function(){
-const selectedbtn = document.querySelector('.btnAutoselect');
+
 // console.log(selectedbtn);
-selectedbtn.click();
+  selectedbtn.click();
 });
 
 
@@ -62,3 +63,32 @@ document.querySelectorAll('[data-filter]').forEach(button => button.addEventList
 }
 ));
 
+// observer trigger functionality
+// const navbar = document.getElementById("navbar");
+
+// topLink.onclick.scrollToTop();
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) {
+        // navbar.classList.add("shrink");
+          topLink.classList.add("hidden");
+          topLink.onclick = e =>{
+            e.preventDefault();
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+            selectedbtn.click();
+            
+          }
+      } else {
+        // navbar.classList.remove("shrink");
+          topLink.classList.remove("hidden");
+      }
+    });
+  },
+  { threshold: 0 } // triggers as soon as element leaves the viewport
+);
+
+observer.observe(trigger);

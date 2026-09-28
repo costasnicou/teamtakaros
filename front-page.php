@@ -15,8 +15,8 @@
 get_header();
 ?>
 
-    <main class="main">
-        <div class="cover">
+    <main id="main" class="main">
+        <div  class="cover">
             <p class="slogan">TEAM TAKAROS · CAR AUDIO & CUSTOM INTERIORS</p>
             <hgroup class="main-hgroup">
                 <h2><span class="brand">Δεν </span>είναι απλώς ένα αυτοκίνητο.</h2>
@@ -102,7 +102,7 @@ get_header();
            
         </section>
 
-        <section class="our-work" id="ourwork">
+        <section class="our-work" id="our-work">
             <div class="wraper">
                 <div class="intro-article">
                     <div class="flex">
@@ -474,6 +474,7 @@ get_header();
 
         </section>
 
+
         <!-- <section class="team">
             <div class="wraper">
                 <article class="team-article">
@@ -530,9 +531,51 @@ get_header();
             </div>
             
         </section>
-        <section style="height: 800px;">
+        
+        <section class="contact-us" id="contact-us">
+            <div class="wraper">
+                <article class="intro-article">
+                    <p class="par-intro">ΤΟ ΟΝΕΙΡΕΥΤΗΚΑΤΕ ΑΣ ΤΟ ΦΤΙΑΞΟΥΜΕ</p>
+                    <h2>Επικοινωνήστε Μαζί μας.</h2>
+                
+                    
+                </article>
 
+              
+                <div class="contact-flex">
+                    <div class="contact-flex-left">
+                        <?php echo apply_shortcodes( '[contact-form-7 id="041d0b3" title="home"]' ); ?>
+                    </div>
+
+                    <div class="contact-flex-right">
+                       <article>
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/logo.jpg" alt="">
+                            <div class="contact-article-content">
+                                <p>Η Team Takaros Tripolis είναι πάντα ανοιχτή σε νέες ιδέες, συνεργασίες και ανθρώπους που μοιράζονται το ίδιο πάθος για την αυτοκίνηση και τα ηχοσυστήματα.</p>
+                                <p class="contact-channel"><i class="fa-solid fa-phone"></i>+30 698 479 5793</p>
+                                <p class="contact-channel"><i class="fa-solid fa-envelope"></i>lprecords20@gmail.com</p>
+                                <p class="contact-channel"><i class="fa-solid fa-location-dot"></i>3ο Χλμ. Ε.Ο. Τριπολης Σπαρτης, Trípoli, Greece</p>
+                            </div>
+
+                           
+                           
+                        </article>
+
+                        <div class="social">
+                            <a class="fb" target="_blank" href="https://www.facebook.com/TeamTakaros/"><i class="fa-brands fa-square-facebook"></i></a>
+                            <a href="https://www.instagram.com/teamtakaros_tripolis/" class="insta" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                        </div>
+                   
+                    </div>
+                </div>
+
+            </div>
+                        
         </section>
+                <!-- This empty div acts as the observer trigger -->
+        <div class="scrollTopTrigger"></div>
+
+        <a href="#" class="to-top-link"><i class="fa-solid fa-circle-chevron-up"></i></a>
     </main>
 
 

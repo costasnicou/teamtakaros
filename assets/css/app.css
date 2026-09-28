@@ -194,7 +194,7 @@ section {
 .intro-article .par-intro {
   color: #a62121;
   margin-bottom: 0;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold; }
 .intro-article h2 {
   font-size: 50px;
@@ -322,6 +322,110 @@ section {
         font-size: 18px;
         line-height: 30px;
         color: #f1efef; }
+
+.to-top-link {
+  display: inline-block;
+  position: sticky;
+  left: 95%;
+  bottom: 100px; }
+  .to-top-link:link, .to-top-link:visited {
+    color: transparent; }
+  .to-top-link i {
+    font-size: 40px;
+    color: #a62121; }
+
+.hidden {
+  display: none; }
+
+.contact-us h2 {
+  margin-bottom: 10px; }
+
+.contact-flex {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; }
+  .contact-flex > div {
+    width: 50%; }
+  .contact-flex-right {
+    border: 1px solid #dedede;
+    padding: 20px 40px;
+    -webkit-box-shadow: 3px 10px 15px -1px rgba(46, 46, 46, 0.06);
+    box-shadow: 3px 10px 15px -1px rgba(46, 46, 46, 0.06); }
+    .contact-flex-right article {
+      text-align: right; }
+      .contact-flex-right article p {
+        font-size: 18px; }
+      .contact-flex-right article::after {
+        content: "";
+        clear: both;
+        display: table; }
+      .contact-flex-right article img {
+        width: 250px;
+        height: 250px;
+        border-radius: 10%;
+        float: left;
+        margin-right: 40px; }
+      .contact-flex-right article .contact-article-content {
+        margin-left: 20px; }
+        .contact-flex-right article .contact-article-content .contact-channel i {
+          margin-right: 10px;
+          color: #a62121; }
+        .contact-flex-right article .contact-article-content .contact-channel strong {
+          color: #a62121; }
+    .contact-flex-right .social {
+      margin-top: 10px;
+      border-top: 1px solid #e6e6e6;
+      padding-top: 10px;
+      text-align: right; }
+      .contact-flex-right .social a:link, .contact-flex-right .social a:visited {
+        color: transparent; }
+      .contact-flex-right .social a.fb i {
+        color: blue;
+        font-size: 80px; }
+      .contact-flex-right .social a.insta i {
+        color: #ff0066;
+        font-size: 80px;
+        margin-left: 10px; }
+
+form .flexing {
+  display: flex;
+  justify-content: space-between;
+  width: 90%; }
+  form .flexing > * {
+    width: 50%;
+    margin: 0; }
+    form .flexing > * input {
+      width: 100%; }
+    form .flexing > *:not(:last-of-type) {
+      margin-right: 5px; }
+
+input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: #fefefe; }
+  input:focus {
+    outline: 2px solid #a62121;
+    border: none; }
+
+textarea {
+  width: 90%;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 10px; }
+  textarea:focus {
+    outline: 2px solid #a62121;
+    border: none; }
+
+input[type="submit"] {
+  background-color: #a62121;
+  color: white;
+  border: none;
+  padding: 15px;
+  transition: all .4s ease-in-out; }
+  input[type="submit"]:hover {
+    background-color: #911d1d; }
 
 .filters {
   display: flex;
