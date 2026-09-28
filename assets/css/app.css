@@ -113,8 +113,8 @@ section {
   .cover .slogan {
     position: absolute;
     color: white;
-    left: 15.5%;
-    top: 22%;
+    left: 15.8%;
+    top: 20%;
     font-weight: bold; }
   .cover .main-hgroup {
     position: absolute;
@@ -296,7 +296,7 @@ section {
       color: white; }
 
 .about-us {
-  background: linear-gradient(90deg, rgba(7, 7, 7, 0.9), rgba(10, 2, 2, 0.8)), url(../imgs/about-us-cover.jpg);
+  background: linear-gradient(90deg, rgba(7, 7, 7, 0.7), rgba(10, 2, 2, 0.6)), url(../imgs/about-us-cover.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
