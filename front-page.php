@@ -553,7 +553,7 @@ get_header();
                             <div class="contact-article-content">
                                 <p>Η Team Takaros Tripolis είναι πάντα ανοιχτή σε νέες ιδέες, συνεργασίες και ανθρώπους που μοιράζονται το ίδιο πάθος για την αυτοκίνηση και τα ηχοσυστήματα.</p>
                                 <p class="contact-channel"><i class="fa-solid fa-phone"></i>+30 698 479 5793</p>
-                                <p class="contact-channel"><i class="fa-solid fa-envelope"></i>lprecords20@gmail.com</p>
+                                <p class="contact-channel"><i class="fa-solid fa-envelope"></i>teamtakaros@gmail.com</p>
                                 <p class="contact-channel"><i class="fa-solid fa-location-dot"></i>3ο Χλμ. Ε.Ο. Τριπολης Σπαρτης, Trípoli, Greece</p>
                             </div>
 
@@ -575,7 +575,7 @@ get_header();
                 <!-- This empty div acts as the observer trigger -->
         <div class="scrollTopTrigger"></div>
 
-        <a href="#" class="to-top-link"><i class="fa-solid fa-circle-chevron-up"></i></a>
+        <a href="" class="to-top-link"><i class="fa-solid fa-circle-chevron-up"></i></a>
     </main>
 
 

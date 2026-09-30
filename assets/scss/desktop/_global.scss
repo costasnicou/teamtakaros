@@ -142,3 +142,47 @@ section{
         }
     }
 }
+body.admin-bar .site-header.header {
+    top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+    body.admin-bar .site-header.header {
+        top: 46px;
+    }
+
+    #padminbar{
+        position: fixed;
+        top: 0;
+    }
+}
+.site-footer{
+    height: 120px;
+    // background-color: darken($brand-red,5%);
+    background-color: rgb(110, 2, 2);
+    background-color: rgb(37, 37, 37);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .footer-wraper{
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        p,p a:link,p a:visited{
+            color: whitesmoke;
+            
+        }
+        p a{
+            text-decoration: underline;
+           color: white;
+        }
+
+        .copy{
+            margin-bottom: 0;
+        }
+        .sign{
+            margin-top: 10px;
+        }
+    }
+}

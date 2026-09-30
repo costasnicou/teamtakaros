@@ -92,3 +92,9 @@ const observer = new IntersectionObserver(
 );
 
 observer.observe(trigger);
+
+
+const date = new Date();
+const htmlYear = document.querySelector('.date');
+
+htmlYear.textContent = date.getFullYear();

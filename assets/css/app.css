@@ -101,6 +101,38 @@ section {
         position: relative;
         right: 8px; }
 
+body.admin-bar .site-header.header {
+  top: 32px; }
+
+@media screen and (max-width: 782px) {
+  body.admin-bar .site-header.header {
+    top: 46px; }
+
+  #padminbar {
+    position: fixed;
+    top: 0; } }
+.site-footer {
+  height: 120px;
+  background-color: #6e0202;
+  background-color: #252525;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .site-footer .footer-wraper {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center; }
+    .site-footer .footer-wraper p, .site-footer .footer-wraper p a:link, .site-footer .footer-wraper p a:visited {
+      color: whitesmoke; }
+    .site-footer .footer-wraper p a {
+      text-decoration: underline;
+      color: white; }
+    .site-footer .footer-wraper .copy {
+      margin-bottom: 0; }
+    .site-footer .footer-wraper .sign {
+      margin-top: 10px; }
+
 .cover {
   height: 65vh;
   background: linear-gradient(45deg, rgba(48, 48, 48, 0.922), rgba(72, 72, 72, 0.163)), url(../imgs/cover-photo.jpg);
@@ -326,7 +358,7 @@ section {
   display: inline-block;
   position: sticky;
   left: 95%;
-  bottom: 100px; }
+  bottom: 140px; }
   .to-top-link:link, .to-top-link:visited {
     color: transparent; }
   .to-top-link i {
@@ -349,7 +381,9 @@ section {
     border: 1px solid #dedede;
     padding: 20px 40px;
     -webkit-box-shadow: 3px 10px 15px -1px rgba(46, 46, 46, 0.06);
-    box-shadow: 3px 10px 15px -1px rgba(46, 46, 46, 0.06); }
+    box-shadow: 3px 10px 15px -1px rgba(46, 46, 46, 0.06);
+    border-radius: 5px;
+    transition: all .4s ease-in-out; }
     .contact-flex-right article {
       text-align: right; }
       .contact-flex-right article p {
@@ -380,11 +414,22 @@ section {
         color: transparent; }
       .contact-flex-right .social a.fb i {
         color: blue;
-        font-size: 80px; }
+        font-size: 40px;
+        padding: 2.5px;
+        border: 1px solid white; }
       .contact-flex-right .social a.insta i {
         color: #ff0066;
-        font-size: 80px;
-        margin-left: 10px; }
+        font-size: 40px;
+        margin-left: 5px;
+        padding: 2.5px;
+        border: 1px solid white; }
+    .contact-flex-right:hover {
+      background-color: #252525; }
+      .contact-flex-right:hover * {
+        color: white; }
+      .contact-flex-right:hover .social i {
+        border: 1px solid #ffa544;
+        background-color: white; }
 
 form .flexing {
   display: flex;
