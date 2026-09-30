@@ -1,4 +1,14 @@
+// Base desktop styles, followed by progressively smaller screen overrides.
 @import "./desktop/global";
 @import "./desktop/home";
-
 @import "./desktop/tab";
+
+@import "./small-desktop/global";
+@import "./small-desktop/home";
+@import "./tablet/global";
+@import "./tablet/home";
+@import "./mobile/global";
+@import "./mobile/home";
+@import "./mobile/tab";
+@import "./small-mobile/global";
+@import "./small-mobile/home";

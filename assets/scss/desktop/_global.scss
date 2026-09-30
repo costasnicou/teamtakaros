@@ -146,16 +146,6 @@ body.admin-bar .site-header.header {
     top: 32px;
 }
 
-@media screen and (max-width: 782px) {
-    body.admin-bar .site-header.header {
-        top: 46px;
-    }
-
-    #padminbar{
-        position: fixed;
-        top: 0;
-    }
-}
 .site-footer{
     height: 120px;
     // background-color: darken($brand-red,5%);
@@ -186,3 +176,13 @@ body.admin-bar .site-header.header {
         }
     }
 }
+// Shared sizing safeguards apply at every viewport width.
+:root { --site-header-height: 100px; --admin-bar-height: 0px; }
+body.admin-bar { --admin-bar-height: 32px; }
+html { scroll-padding-top: calc(var(--site-header-height) + 16px); }
+body.admin-bar section[id] { scroll-margin-top: var(--admin-bar-height); }
+img, video { max-width: 100%; }
+.about-us iframe { display: block; width: 100%; height: auto; aspect-ratio: 720 / 380; }
+.intro-article .flex > *, .contact-flex > *, .project { min-width: 0; }
+
+.menu-toggle { display: none; }

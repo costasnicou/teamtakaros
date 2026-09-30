@@ -1,0 +1,53 @@
+// Phones, including landscape phones and smaller tablets.
+@media screen and (max-width: 767px) {
+  :root { --site-header-height: 158px; }
+  .wraper { width: calc(100% - 40px); }
+  section { padding: 56px 0; }
+  h2, .intro-article h2, .team .team-article h2 {
+    font-size: 32px;
+    line-height: 1.2;
+    overflow-wrap: break-word;
+  }
+  .header {
+    .top-header { height: 8px; }
+    .header-wraper {
+      width: calc(100% - 32px);
+      gap: 6px 12px;
+      .logo {
+        .logo-img { width: 42px; height: 42px; }
+        .tagline { left: 0; margin-left: 8px; }
+        .tagline h1 { font-size: 16px; margin-top: 8px; }
+        .tagline p { font-size: 8px; margin-bottom: 8px; }
+      }
+      .contact-info p { font-size: 12px; padding: 0; white-space: nowrap; }
+      .contact-info p i { right: 3px; }
+      .main-nav .main-menu {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0 12px;
+        text-align: center;
+        li a { padding: 12px 0; font-size: 14px; }
+      }
+    }
+  }
+  .site-footer {
+    height: auto;
+    min-height: 120px;
+    padding: 24px 0;
+    .footer-wraper { width: calc(100% - 40px); font-size: 14px; line-height: 1.6; }
+  }
+  .to-top-link { left: calc(100% - 52px); bottom: 24px; }
+}
+
+@media screen and (max-width: 767px) {
+  html.navigation-ready { --site-header-height: 82px; }
+  .navigation-ready .header .header-wraper { height: calc(100% - 8px); }
+}
+
+
+@media screen and (max-width: 767px) {
+    .to-top-link {
+        left: calc(100% - 52px);
+        bottom: 140px;
+    }
+}

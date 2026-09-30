@@ -1,0 +1,38 @@
+@media screen and (max-width: 1199px) {
+  .cover {
+    min-height: 580px;
+    column-gap: 5%;
+    .main-hgroup h2, .main-hgroup h3 { font-size: 48px; }
+  }
+  .services-overview .wraper {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 24px;
+    padding: 24px 0;
+    text-align: center;
+    p { margin: 0; }
+    .dot { display: none; }
+  }
+  .services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .services-detail .wraper .intro-article .flex {
+    &-left, &-right { width: 100%; }
+  }
+  .about-us {
+    min-height: 0;
+    background-attachment: scroll;
+    .about-us-flex {
+      flex-direction: column;
+      gap: 24px;
+      > * { width: 100%; }
+    }
+  }
+  .contact-flex {
+    flex-direction: column;
+    gap: 32px;
+    > div { width: 100%; min-width: 0; }
+    form {
+      .flexing, input, textarea, select { width: 100%; }
+      input[type="checkbox"], input[type="radio"] { width: auto; }
+    }
+  }
+}

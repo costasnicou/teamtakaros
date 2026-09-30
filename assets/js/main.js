@@ -1,3 +1,41 @@
+// Keep the menu usable without JavaScript; enhance it once the controls exist.
+(() => {
+  const header = document.querySelector('.site-header');
+  const toggle = header?.querySelector('.menu-toggle');
+  const nav = header?.querySelector('.main-nav');
+  if (!toggle || !nav) return;
+
+  const compact = window.matchMedia('(max-width: 1199px)');
+  const setOpen = (open) => {
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Κλείσιμο μενού' : 'Άνοιγμα μενού');
+    nav.classList.toggle('is-open', open);
+    nav.inert = compact.matches && !open;
+  };
+
+  document.documentElement.classList.add('navigation-ready');
+  setOpen(false);
+  toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
+  nav.addEventListener('click', (event) => {
+    if (!compact.matches || !event.target.closest('a')) return;
+    toggle.focus({ preventScroll: true });
+    setOpen(false); // Native anchor scrolling uses the existing smooth-scroll offset.
+  });
+  header.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+      setOpen(false);
+      toggle.focus({ preventScroll: true });
+    }
+  });
+  document.addEventListener('click', (event) => {
+    if (compact.matches && !header.contains(event.target)) setOpen(false);
+  });
+  compact.addEventListener('change', () => {
+    if (compact.matches && nav.contains(document.activeElement)) toggle.focus({ preventScroll: true });
+    setOpen(false);
+  });
+})();
+
 // 'use strict';
 const selectedbtn = document.querySelector('.btnAutoselect');
 const trigger = document.querySelector(".scrollTopTrigger");

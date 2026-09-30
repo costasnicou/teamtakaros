@@ -43,7 +43,13 @@
                 </div>
             </div>
 
-            <nav class="main-nav">
+            <button class="menu-toggle" type="button" aria-controls="header-navigation" aria-expanded="false" aria-label="Άνοιγμα μενού">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
+
+            <nav class="main-nav" id="header-navigation" aria-label="Κύρια πλοήγηση">
                 <ul class="main-menu">
                     <li><a href="#services">Υπηρεσίες</a></li>
                     <li><a href="#our-work">Η δουλειά μας</a></li>

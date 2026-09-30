@@ -1,0 +1,16 @@
+@media screen and (max-width: 767px) {
+  .filters {
+    gap: 8px;
+    button { min-height: 44px; padding: 10px 14px; font-size: 12px; }
+  }
+  .project-grid { gap: 20px 16px; }
+  #photo-dialog {
+    width: calc(100% - 24px);
+    max-width: calc(100% - 24px);
+    max-height: 90vh;
+    max-height: 90dvh;
+    padding: 52px 12px 12px;
+    img { display: block; max-height: calc(90vh - 64px); max-height: calc(90dvh - 64px); }
+    .close { min-width: 44px; min-height: 44px; }
+  }
+}

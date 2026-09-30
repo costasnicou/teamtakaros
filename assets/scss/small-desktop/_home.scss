@@ -1,0 +1,43 @@
+@media screen and (max-width: 1600px) {
+  // Flow layout prevents the Greek headline and CTA from overlapping.
+  .cover {
+    height: auto;
+    min-height: 620px;
+    padding: 64px 6% 36px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+    align-content: center;
+    align-items: center;
+    gap: 28px 7%;
+    .slogan, .main-hgroup, .cover-cta, .passion, .cover-location {
+      position: static;
+      transform: none;
+      margin: 0;
+    }
+    .slogan { grid-column: 1 / -1; font-size: 14px; }
+    .main-hgroup {
+      h2, h3 { width: auto; font-size: 60px; line-height: 1.12; }
+      h3 { margin-top: 12px; }
+    }
+    .cover-cta { justify-self: center; }
+    .passion { grid-column: 1 / -1; margin-top: 16px; }
+    .cover-location { grid-column: 1 / -1; text-align: center; }
+  }
+  .services { 
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    .service:not(:last-of-type) { margin-right: 0; }
+  }
+  .about-us .about-us-flex {
+    gap: 40px;
+    > * { width: calc(50% - 20px); min-width: 0; }
+    .about-us-article { margin-right: 0; }
+  }
+  .contact-flex-right {
+    padding: 24px;
+    article img { width: 160px; height: 160px; margin: 0 24px 16px 0; }
+  }
+  .team .members { gap: 24px; flex-wrap: wrap; }
+  .team .members .member { margin: 0; }
+}

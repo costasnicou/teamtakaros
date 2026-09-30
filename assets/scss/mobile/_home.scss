@@ -1,0 +1,54 @@
+@media screen and (max-width: 767px) {
+  .cover {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 0;
+    padding: 44px 20px 24px;
+    gap: 24px;
+    background-position: 60% center;
+    .slogan { font-size: 11px; line-height: 1.6; }
+    .main-hgroup h2, .main-hgroup h3 { font-size: 42px; }
+    .cover-cta {
+      justify-self: start;
+      p { margin-top: 0; }
+      .cover-cta-btn { padding: 16px 24px; max-width: 100%; }
+    }
+    .passion { margin-top: 8px; font-size: 10px; }
+    .cover-location { font-size: 10px; }
+  }
+  .services-overview .wraper { gap: 16px; font-size: 12px; line-height: 1.5; }
+  .intro-article .flex {
+    flex-direction: column;
+    gap: 12px;
+    &-left, &-right { width: 100%; }
+    &-right .par-brand { text-align: left; margin-top: 0; }
+  }
+  .services .service {
+    padding: 36px 18px 24px;
+    .gr-desc { line-height: 1.6; }
+    &:hover { transform: none; }
+  }
+  .about-us .about-us-flex .about-us-article {
+    h3 { font-size: 22px; }
+    p { font-size: 16px; line-height: 1.8; }
+  }
+  .contact-flex-right {
+    padding: 20px;
+    article {
+      text-align: left;
+      img { float: none; display: block; margin: 0 auto 20px; }
+      .contact-article-content { margin-left: 0; }
+      p { font-size: 16px; line-height: 1.7; overflow-wrap: anywhere; }
+    }
+    .social { text-align: center; }
+  }
+  .contact-flex form {
+    input, textarea, select { font-size: 16px; min-height: 44px; max-width: 100%; }
+    textarea { resize: vertical; }
+    .flexing {
+      flex-direction: column;
+      gap: 16px;
+      > * { width: 100%; margin-right: 0; }
+    }
+  }
+  .team .members .member { width: 100%; max-width: 360px; padding: 28px; }
+}

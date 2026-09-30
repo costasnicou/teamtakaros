@@ -1,0 +1,22 @@
+// Narrow phones: reserve a separate line for the phone number.
+@media screen and (max-width: 479px) {
+  :root { --site-header-height: 184px; }
+  .wraper { width: calc(100% - 32px); }
+  .header .header-wraper {
+    grid-template-columns: minmax(0, 1fr);
+    .logo { justify-self: center; }
+    .contact-info { grid-row: 2; justify-self: center; }
+    .main-nav { grid-row: 3; }
+  }
+  h2, .intro-article h2, .team .team-article h2 { font-size: 28px; }
+}
+
+@media screen and (max-width: 479px) {
+  html.navigation-ready { --site-header-height: 104px; }
+  .navigation-ready .header .header-wraper {
+    grid-template-columns: minmax(0, 1fr) auto;
+    .logo { justify-self: start; }
+    .menu-toggle { grid-column: 2; }
+    .contact-info { grid-column: 1 / -1; grid-row: 2; justify-self: center; }
+  }
+}

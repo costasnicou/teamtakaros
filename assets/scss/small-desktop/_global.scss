@@ -1,0 +1,16 @@
+// Laptops and smaller desktop monitors.
+@media screen and (max-width: 1600px) {
+  .wraper { width: 88%; }
+  .header .header-wraper {
+    width: 92%;
+    gap: 20px;
+    .main-nav .main-menu {
+      gap: 18px;
+      padding: 0;
+      li { margin: 0; }
+      a { white-space: nowrap; }
+    }
+    .contact-info { flex-shrink: 0; }
+  }
+  section { padding: 80px 0 64px; }
+}
