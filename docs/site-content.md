@@ -10,9 +10,9 @@ The six tabs cover the header branding, hero, services, gallery, about section, 
 - Footer text and credits are fixed in `footer.php` and have no Site Content controls.
 - The phone field on the Contact tab updates both the header and contact section.
 - Formatted fields accept `<strong>`, `<em>`, `<br>`, and `<span class="brand">`. The header logo uses `<span class="emf">`. Use `<br>` for explicit line breaks; paragraph or heading tags are not supported inside these fields.
-- The Our Work tab edits only the intro label, heading, and introduction. Filter button labels, project captions, image descriptions, and gallery accessibility labels are fixed in `front-page.php`.
+- The Our Work tab edits the intro label, heading, and introduction. Manage parent tabs, child collections, and photos under **Media → Our Work tabs** (also linked from this tab). See [gallery instructions](gallery.md).
 - Contact form fields and messages are managed in **Contact → Contact Forms** (Contact Form 7).
-- Images, gallery item counts, service counts, and the video remain in the templates; these controls manage the existing site's text and social links.
+- Service counts and the video remain in the templates. Gallery images and tabs have their own dashboard editor.
 
 Settings are stored in one WordPress option per tab (`teamtakaros_content_header`, `teamtakaros_content_hero`, etc.). Saved text still renders if CMB2 is deactivated; administrators see a reminder to reactivate it for editing. Only administrators with `manage_options` can access the content editor.
 

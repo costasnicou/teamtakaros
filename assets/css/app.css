@@ -372,7 +372,8 @@ img, video {
       .about-us .about-us-flex .about-us-article p {
         font-size: 18px;
         line-height: 30px;
-        color: #f1efef; }
+        color: #fff;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35); }
 
 .to-top-link {
   display: inline-block;
@@ -585,6 +586,105 @@ dialog {
     font-size: 32px;
     padding: 4px 10px; }
 
+.work-gallery [hidden] {
+  display: none !important; }
+.work-gallery button {
+  font-family: inherit;
+  cursor: pointer; }
+.work-gallery button:focus-visible, .work-gallery [role="tabpanel"]:focus-visible {
+  outline: 3px solid #a62121;
+  outline-offset: 4px; }
+.work-gallery .gallery-parents {
+  gap: 10px;
+  margin-bottom: 20px; }
+  .work-gallery .gallery-parents button {
+    min-height: 46px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: black;
+    transition: background-color .2s, color .2s; }
+    .work-gallery .gallery-parents button[aria-selected="true"] {
+      background: #a62121;
+      color: white; }
+    .work-gallery .gallery-parents button:hover {
+      background: rgba(166, 33, 33, 0.08); }
+    .work-gallery .gallery-parents button[aria-selected="true"]:hover {
+      background: #8c1c1c; }
+.work-gallery .gallery-children {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  border-bottom: 1px solid #dedede;
+  margin-bottom: 28px; }
+  .work-gallery .gallery-children button {
+    background: transparent;
+    border: 0;
+    border-bottom: 3px solid transparent;
+    padding: 12px 4px;
+    min-height: 46px;
+    color: #565656;
+    font-size: 14px;
+    line-height: 1.5; }
+    .work-gallery .gallery-children button[aria-selected="true"] {
+      border-bottom-color: #a62121;
+      color: #a62121;
+      font-weight: 700; }
+    .work-gallery .gallery-children button:hover {
+      color: #a62121; }
+.work-gallery .gallery-description {
+  max-width: 720px;
+  margin: 0 0 24px;
+  line-height: 1.7; }
+.work-gallery .project-grid {
+  margin-bottom: 24px; }
+.work-gallery .project-image img {
+  display: block;
+  object-fit: contain; }
+.work-gallery .project-image {
+  border-radius: 2px; }
+.work-gallery .gallery-status {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  min-height: 20px;
+  margin: 16px 0; }
+.work-gallery .gallery-empty {
+  padding: 40px 20px;
+  text-align: center;
+  border: 1px solid #e3e3e3;
+  line-height: 1.7; }
+.work-gallery .gallery-actions {
+  display: flex;
+  justify-content: center; }
+.work-gallery .gallery-load-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 14px 28px;
+  min-height: 48px;
+  border: 1px solid #a62121;
+  border-radius: 2px;
+  background: #a62121;
+  color: white;
+  font-size: 14px;
+  line-height: 1.5; }
+  .work-gallery .gallery-load-more:hover {
+    background: #8c1c1c; }
+  .work-gallery .gallery-load-more:disabled {
+    opacity: .65;
+    cursor: wait; }
+.work-gallery .gallery-collection[aria-busy="true"] .project-grid:empty {
+  min-height: 160px;
+  background: #f0efec;
+  border-radius: 2px; }
+
+body.gallery-dialog-open {
+  overflow: hidden; }
+
+@media (prefers-reduced-motion: reduce) {
+  .work-gallery .project-image img {
+    transition: none; } }
 @media screen and (max-width: 1600px) {
   .wraper {
     width: 88%; }
@@ -1000,6 +1100,34 @@ dialog {
     #photo-dialog .close {
       min-width: 44px;
       min-height: 44px; } }
+@media screen and (max-width: 767px) {
+  .work-gallery .gallery-parents {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px; }
+    .work-gallery .gallery-parents button {
+      padding: 10px;
+      font-size: 12px;
+      overflow-wrap: anywhere; }
+  .work-gallery .gallery-children {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 4px 4px 0;
+    margin: 0 -4px 24px;
+    scroll-padding: 4px; }
+    .work-gallery .gallery-children button {
+      flex: 0 0 auto;
+      max-width: 80vw;
+      overflow-wrap: anywhere;
+      font-size: 13px; }
+  .work-gallery .gallery-load-more {
+    width: 100%;
+    max-width: 360px; }
+  .work-gallery .gallery-description {
+    font-size: 14px; }
+  .work-gallery .project-grid {
+    gap: 16px; } }
 @media screen and (max-width: 479px) {
   :root {
     --site-header-height: 184px; }
@@ -1032,7 +1160,11 @@ dialog {
     .navigation-ready .header .header-wraper .contact-info {
       grid-column: 1 / -1;
       grid-row: 2;
-      justify-self: center; } }
+      justify-self: center; }
+
+  .site-footer .footer-wraper .sign {
+    width: 50%;
+    margin: 5px auto 5px auto; } }
 @media screen and (max-width: 479px) {
   .cover {
     padding: 36px 16px 24px; }

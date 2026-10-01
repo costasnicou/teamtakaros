@@ -140,11 +140,14 @@ add_action( 'widgets_init', 'teamtakaros_widgets_init' );
 function teamtakaros_scripts() {
 	wp_enqueue_style( 'teamtakaros-style', get_stylesheet_uri(), array(), _S_VERSION );
 	// main styles
-	wp_enqueue_style( 'teamtakaros-main-styles', get_template_directory_uri() . '/assets/css/app.css', array(), _S_VERSION );
+	wp_enqueue_style( 'teamtakaros-main-styles', get_template_directory_uri() . '/assets/css/app.css', array(), filemtime( get_template_directory() . '/assets/css/app.css' ) );
 	wp_style_add_data( 'teamtakaros-style', 'rtl', 'replace' );
 
 	// main js
-	wp_enqueue_script( 'teamtakaros-home-js', get_template_directory_uri() . '/assets/js/main.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'teamtakaros-home-js', get_template_directory_uri() . '/assets/js/main.js', array(), filemtime( get_template_directory() . '/assets/js/main.js' ), true );
+	if ( is_front_page() ) {
+		wp_enqueue_script( 'teamtakaros-gallery', get_template_directory_uri() . '/assets/js/gallery.js', array(), filemtime( get_template_directory() . '/assets/js/gallery.js' ), true );
+	}
 
 	// wp_enqueue_script( 'teamtakaros-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
@@ -184,3 +187,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 /** Editable site text powered by CMB2. */
 require get_template_directory() . '/inc/content-options.php';
+
+/** Dashboard-managed gallery tabs and photo collections. */
+require get_template_directory() . '/inc/gallery.php';

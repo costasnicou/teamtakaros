@@ -301,6 +301,14 @@ function teamtakaros_register_content_options() {
 			'name' => $settings['title'],
 			'desc' => __( 'Edit the text below and save this tab before switching tabs. Empty fields use the original theme text. The phone number is shared by the header and contact section. Contact form labels are edited in Contact Form 7.', 'teamtakaros' ),
 		) );
+		if ( 'work' === $section ) {
+			$box->add_field( array(
+				'id' => 'gallery_management',
+				'type' => 'title',
+				'name' => __( 'Tabs and photos', 'teamtakaros' ),
+				'desc' => '<a href="' . esc_url( admin_url( 'edit-tags.php?taxonomy=tt_work_tab&post_type=attachment' ) ) . '">' . esc_html__( 'Manage gallery tabs and upload photos', 'teamtakaros' ) . '</a>',
+			) );
+		}
 		foreach ( $settings['fields'] as $key => $definition ) {
 			$format = $definition['format'];
 			$field = array(

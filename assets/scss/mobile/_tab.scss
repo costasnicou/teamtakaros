@@ -14,3 +14,26 @@
     .close { min-width: 44px; min-height: 44px; }
   }
 }
+
+@media screen and (max-width: 767px) {
+  .work-gallery {
+    .gallery-parents {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      button { padding: 10px; font-size: 12px; overflow-wrap: anywhere; }
+    }
+    .gallery-children {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 16px;
+      padding: 4px 4px 0;
+      margin: 0 -4px 24px;
+      scroll-padding: 4px;
+      button { flex: 0 0 auto; max-width: 80vw; overflow-wrap: anywhere; font-size: 13px; }
+    }
+    .gallery-load-more { width: 100%; max-width: 360px; }
+    .gallery-description { font-size: 14px; }
+    .project-grid { gap: 16px; }
+  }
+}
