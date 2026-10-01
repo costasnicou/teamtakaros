@@ -185,6 +185,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 
+/** Account-specific Site Content and Media permissions. */
+require get_template_directory() . '/inc/access-control.php';
+
 /** Editable site text powered by CMB2. */
 require get_template_directory() . '/inc/content-options.php';
 

@@ -28,8 +28,8 @@ function teamtakaros_register_gallery() {
 		'meta_box_cb' => false,
 		'rewrite' => false,
 		'capabilities' => array(
-			'manage_terms' => 'manage_options', 'edit_terms' => 'manage_options',
-			'delete_terms' => 'manage_options', 'assign_terms' => 'manage_options',
+			'manage_terms' => 'tt_manage_site_content', 'edit_terms' => 'tt_manage_site_content',
+			'delete_terms' => 'tt_manage_site_content', 'assign_terms' => 'tt_manage_site_content',
 		),
 	) );
 }

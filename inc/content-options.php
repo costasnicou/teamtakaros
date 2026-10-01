@@ -289,7 +289,7 @@ function teamtakaros_register_content_options() {
 			'object_types' => array( 'options-page' ),
 			'option_key' => 'teamtakaros_content_' . $section,
 			'parent_slug' => 'header' === $section ? '' : 'teamtakaros_content_header',
-			'capability' => 'manage_options',
+			'capability' => 'tt_manage_site_content',
 			'icon_url' => 'dashicons-edit-page',
 			'tab_group' => 'teamtakaros_site_content',
 			'tab_title' => $settings['title'],
@@ -340,7 +340,7 @@ add_action( 'cmb2_admin_init', 'teamtakaros_register_content_options' );
 
 /** Explain why the editing screen is unavailable when the plugin is inactive. */
 function teamtakaros_content_plugin_notice() {
-	if ( current_user_can( 'manage_options' ) && ! function_exists( 'new_cmb2_box' ) ) {
+	if ( current_user_can( 'tt_manage_site_content' ) && ! function_exists( 'new_cmb2_box' ) ) {
 		echo '<div class="notice notice-warning"><p>' . esc_html__( 'Team Takaros: activate CMB2 to edit the site text under Site Content. Saved content will still display while CMB2 is inactive.', 'teamtakaros' ) . '</p></div>';
 	}
 }

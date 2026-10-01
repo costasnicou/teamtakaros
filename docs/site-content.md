@@ -14,7 +14,7 @@ The six tabs cover the header branding, hero, services, gallery, about section, 
 - Contact form fields and messages are managed in **Contact → Contact Forms** (Contact Form 7).
 - Service counts and the video remain in the templates. Gallery images and tabs have their own dashboard editor.
 
-Settings are stored in one WordPress option per tab (`teamtakaros_content_header`, `teamtakaros_content_hero`, etc.). Saved text still renders if CMB2 is deactivated; administrators see a reminder to reactivate it for editing. Only administrators with `manage_options` can access the content editor.
+Settings are stored in one WordPress option per tab (`teamtakaros_content_header`, `teamtakaros_content_hero`, etc.). Saved text still renders if CMB2 is deactivated; administrators see a reminder to reactivate it for editing. Administrators and the restricted `admtakaros` account can access the content editor through its dedicated capability. See [account access](account-access.md).
 
 The field definitions and original copy live in `inc/content-options.php`. Templates read them with `teamtakaros_content( $section, $key )` and escape output according to its context. Add new fields to the schema and connect them to a template to extend the editor.
 

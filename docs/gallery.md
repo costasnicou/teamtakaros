@@ -1,6 +1,6 @@
 # Our Work gallery
 
-Open **Media → Our Work tabs** as a WordPress administrator. A shortcut is also available in **Site Content → Our work → Tabs and photos**. Keep CMB2 active for photo uploads and tab ordering.
+Open **Media → Our Work tabs** as a WordPress administrator or the restricted `admtakaros` account. A shortcut is also available in **Site Content → Our work → Tabs and photos**. Keep CMB2 active for photo uploads and tab ordering.
 
 1. Add a parent tab, such as Ηχοσυστήματα, with **Parent tab: None**.
 2. Add a child tab and select that parent. The gallery supports exactly two levels.
