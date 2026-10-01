@@ -119,7 +119,6 @@ body.admin-bar .site-header.header {
     .site-footer .footer-wraper p, .site-footer .footer-wraper p a:link, .site-footer .footer-wraper p a:visited {
       color: whitesmoke; }
     .site-footer .footer-wraper p a {
-      text-decoration: underline;
       color: white; }
     .site-footer .footer-wraper .copy {
       margin-bottom: 0; }

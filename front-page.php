@@ -26,7 +26,7 @@ get_header();
 
             <div class="cover-cta">
                 <p>Βάλε τον δικό σου ήχο. <br >Διάλεξε το δικό σου στυλ. <br> Ζήσε αλλιώς τη διαδρομή.</p> 
-                <a href="" class="cover-cta-btn">Πάμε να το αλλάξουμε</a>   
+                <a href="#contact-us" class="cover-cta-btn">Πάμε να το αλλάξουμε</a>   
             </div>
 
             <p class="passion">REAL WORK REAL PASSION</p>
@@ -544,7 +544,8 @@ get_header();
               
                 <div class="contact-flex">
                     <div class="contact-flex-left">
-                        <?php echo apply_shortcodes( '[contact-form-7 id="041d0b3" title="home"]' ); ?>
+                        <?php echo apply_shortcodes( '[contact-form-7 id="da13b60" title="home"]' ); ?>
+
                     </div>
 
                     <div class="contact-flex-right">
