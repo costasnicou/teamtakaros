@@ -157,6 +157,7 @@ dialog {
   .gallery-description { max-width: 720px; margin: 0 0 24px; line-height: 1.7; }
   .project-grid { margin-bottom: 24px; }
   .project-image img { display: block; object-fit: contain; }
+  .project-image.is-portrait img { object-fit: cover; }
   .project-image { border-radius: 2px; }
   .gallery-status { text-align: center; font-size: 13px; color: #666; min-height: 20px; margin: 16px 0; }
   .gallery-empty { padding: 40px 20px; text-align: center; border: 1px solid #e3e3e3; line-height: 1.7; }

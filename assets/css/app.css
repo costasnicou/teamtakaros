@@ -640,6 +640,8 @@ dialog {
 .work-gallery .project-image img {
   display: block;
   object-fit: contain; }
+.work-gallery .project-image.is-portrait img {
+  object-fit: cover; }
 .work-gallery .project-image {
   border-radius: 2px; }
 .work-gallery .gallery-status {

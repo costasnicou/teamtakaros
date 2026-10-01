@@ -195,12 +195,14 @@ function teamtakaros_gallery_page( $tab_id, $page = 1 ) {
 	ob_start();
 	foreach ( $query->posts as $photo ) {
 		$url = wp_get_attachment_image_url( $photo->ID, 'full' );
+		$metadata = wp_get_attachment_metadata( $photo->ID );
+		$is_portrait = ! empty( $metadata['width'] ) && ! empty( $metadata['height'] ) && $metadata['height'] > $metadata['width'];
 		$alt = get_post_meta( $photo->ID, '_wp_attachment_image_alt', true );
 		$caption = wp_strip_all_tags( wp_get_attachment_caption( $photo->ID ) );
 		$description = $alt ? $alt : ( $caption ? $caption : $photo->post_title );
 		?>
 		<article class="project" data-photo-id="<?php echo esc_attr( $photo->ID ); ?>">
-			<button type="button" class="project-image" data-photo="<?php echo esc_url( $url ); ?>" data-alt="<?php echo esc_attr( $description ); ?>" aria-label="<?php echo esc_attr( sprintf( __( 'Μεγέθυνση: %s', 'teamtakaros' ), $description ) ); ?>">
+			<button type="button" class="project-image<?php echo $is_portrait ? ' is-portrait' : ''; ?>" data-photo="<?php echo esc_url( $url ); ?>" data-alt="<?php echo esc_attr( $description ); ?>" aria-label="<?php echo esc_attr( sprintf( __( 'Μεγέθυνση: %s', 'teamtakaros' ), $description ) ); ?>">
 				<?php echo wp_get_attachment_image( $photo->ID, 'large', false, array( 'alt' => $description, 'loading' => 'lazy', 'sizes' => '(max-width: 479px) 100vw, (max-width: 1199px) 50vw, 38vw' ) ); ?>
 				<span aria-hidden="true">↗</span>
 			</button>
