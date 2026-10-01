@@ -27,6 +27,14 @@ $original_post = $_POST;
 try {
 	$admins = get_users( array( 'role' => 'administrator', 'number' => 1, 'fields' => 'ID' ) );
 	wp_set_current_user( $admins[0] );
+	foreach ( array( '-1', '0' ) as $none_value ) {
+		$top = tt_term( 'Gallery None regression ' . uniqid(), $none_value ); $roots[] = $top;
+		tt_check( 0 === (int) get_term( $top, 'tt_work_tab' )->parent, 'Dashboard None value ' . $none_value . ' creates a top-level tab' );
+		$tree = teamtakaros_gallery_tree();
+		tt_check( isset( $tree[ $top ] ), 'New top-level tab appears in the gallery tree' );
+	}
+	$dropdown = apply_filters( 'taxonomy_parent_dropdown_args', array(), 'tt_work_tab', 'new' );
+	tt_check( 0 === $dropdown['option_none_value'], 'Gallery dropdown uses zero for None' );
 	$root = tt_term( 'Gallery test ' . uniqid() ); $roots[] = $root;
 	$other_root = tt_term( 'Gallery test other ' . uniqid() ); $roots[] = $other_root;
 	$child = tt_term( 'Collection A', $root );

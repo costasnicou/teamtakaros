@@ -48,13 +48,16 @@ function teamtakaros_gallery_child( $id ) {
 function teamtakaros_gallery_parent_dropdown( $args, $taxonomy ) {
 	if ( 'tt_work_tab' === $taxonomy ) {
 		$args['parent'] = 0;
+		$args['option_none_value'] = 0;
 	}
 	return $args;
 }
 add_filter( 'taxonomy_parent_dropdown_args', 'teamtakaros_gallery_parent_dropdown', 10, 2 );
 
 function teamtakaros_gallery_insert_term( $name, $taxonomy, $args ) {
-	if ( 'tt_work_tab' === $taxonomy && ! empty( $args['parent'] ) ) {
+	$args = wp_parse_args( $args );
+	// WordPress submits -1 for None and normalizes it to 0 after this hook.
+	if ( 'tt_work_tab' === $taxonomy && isset( $args['parent'] ) && (int) $args['parent'] > 0 ) {
 		$parent = get_term( (int) $args['parent'], $taxonomy );
 		if ( ! $parent || is_wp_error( $parent ) || $parent->parent ) {
 			return new WP_Error( 'gallery_depth', __( 'Choose a top-level parent tab. The gallery supports two levels.', 'teamtakaros' ) );
