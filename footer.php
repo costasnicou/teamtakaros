@@ -14,7 +14,7 @@
 	<footer id="colophon" class="site-footer">
 		<div class="footer-wraper">
 			<p class="copy">&copy; Copyright <span class="date"></span> - TeamTakaros</p>
-			<p class="sign">Designed & Developed by <br> <a href="">Costas Nicou</a></p>
+			<p class="sign">Designed &amp; Developed by <br> <a href="">Costas Nicou</a></p>
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

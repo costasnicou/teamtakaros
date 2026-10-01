@@ -181,3 +181,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+/** Editable site text powered by CMB2. */
+require get_template_directory() . '/inc/content-options.php';

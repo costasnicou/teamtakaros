@@ -17,20 +17,20 @@ get_header();
 
     <main id="main" class="main">
         <div  class="cover">
-            <p class="slogan">TEAM TAKAROS · CAR AUDIO & CUSTOM INTERIORS</p>
+            <p class="slogan"><?php echo esc_html( teamtakaros_content( 'hero', 'slogan' ) ); ?></p>
             <hgroup class="main-hgroup">
-                <h2><span class="brand">Δεν </span>είναι απλώς ένα αυτοκίνητο.</h2>
-                <h3>Είναι το <span class="brand">δικό σου.</span></h3> 
+                <h2><?php echo teamtakaros_sanitize_inline_content( teamtakaros_content( 'hero', 'heading' ) ); ?></h2>
+                <h3><?php echo teamtakaros_sanitize_inline_content( teamtakaros_content( 'hero', 'subheading' ) ); ?></h3>
             </hgroup>
            
 
             <div class="cover-cta">
-                <p>Βάλε τον δικό σου ήχο. <br >Διάλεξε το δικό σου στυλ. <br> Ζήσε αλλιώς τη διαδρομή.</p> 
-                <a href="#contact-us" class="cover-cta-btn">Πάμε να το αλλάξουμε</a>   
+                <p><?php echo teamtakaros_sanitize_inline_content( teamtakaros_content( 'hero', 'description' ) ); ?></p>
+                <a href="#contact-us" class="cover-cta-btn"><?php echo esc_html( teamtakaros_content( 'hero', 'button' ) ); ?></a>
             </div>
 
-            <p class="passion">REAL WORK REAL PASSION</p>
-            <p class="cover-location">ΤΡΙΠΟΛΗ, ΑΡΚΑΔΙΑ / GR</p>
+            <p class="passion"><?php echo esc_html( teamtakaros_content( 'hero', 'passion' ) ); ?></p>
+            <p class="cover-location"><?php echo esc_html( teamtakaros_content( 'hero', 'location' ) ); ?></p>
         </div>
         <div class="services-overview">
             <div class="wraper">
@@ -51,12 +51,12 @@ get_header();
                 <div class="intro-article">
                     <div class="flex">
                         <div class="flex-left">
-                            <p class="par-intro">TΕΣΣΕΡΙΣ ΤΡΟΠΟΙ ΝΑ ΞΕΧΩΡΙΣΕΙΣ.</p>
-                            <h2>Μια ομάδα. Κάθε αναβάθμιση.</h2>
+                            <p class="par-intro"><?php echo esc_html( teamtakaros_content( 'services', 'intro' ) ); ?></p>
+                            <h2><?php echo esc_html( teamtakaros_content( 'services', 'heading' ) ); ?></h2>
                         </div>
 
                         <div class="flex-right">
-                             <p class="par-brand">Από τον <strong>ήχο </strong>μέχρι την τελευταία <strong>ραφή</strong> , φροντίζουμε <br> όσα κάνουν τη διαδρομή σου  <strong>ξεχωριστή.</strong></p>
+                             <p class="par-brand"><?php echo teamtakaros_sanitize_inline_content( teamtakaros_content( 'services', 'description' ) ); ?></p>
                         </div>
 
                     </div>
@@ -68,32 +68,32 @@ get_header();
 
                     <div class="service">
                         <span class="num">01</span>
-                        <p class="en-title">CAR AUDIO</p>
-                        <h3 class="gr-title">Ηχοσυστήματα</h3>
-                        <p class="gr-desc">Από την καθημερινή ακρόαση μέχρι μια custom εγκατάσταση. Ηχεία, ενισχυτές, subwoofer και οθόνες, με μελέτη για το δικό σου αυτοκίνητο.</p>
+                        <p class="en-title"><?php echo esc_html( teamtakaros_content( 'services', 'service_1_english' ) ); ?></p>
+                        <h3 class="gr-title"><?php echo esc_html( teamtakaros_content( 'services', 'service_1_title' ) ); ?></h3>
+                        <p class="gr-desc"><?php echo esc_html( teamtakaros_content( 'services', 'service_1_description' ) ); ?></p>
 
                     </div>
 
                     <div class="service">
                         <span class="num">02</span>
-                        <p class="en-title">CUSTOM INTERIORS</p>
-                        <h3 class="gr-title">Ταπετσαρίες</h3>
-                        <p class="gr-desc">Νέα υφή, χρώμα και χαρακτήρας στο εσωτερικό σου. Επενδύσεις καθισμάτων, ουρανού και θυρών, με προσοχή σε κάθε ραφή.</p>
+                        <p class="en-title"><?php echo esc_html( teamtakaros_content( 'services', 'service_2_english' ) ); ?></p>
+                        <h3 class="gr-title"><?php echo esc_html( teamtakaros_content( 'services', 'service_2_title' ) ); ?></h3>
+                        <p class="gr-desc"><?php echo esc_html( teamtakaros_content( 'services', 'service_2_description' ) ); ?></p>
                         
                     </div>
 
                     <div class="service">
                         <span class="num">03</span>
-                        <p class="en-title">WINDOW FILMS</p>
-                        <h3 class="gr-title">Αντηλιακές Μεμβράνες</h3>
-                        <p class="gr-desc">Αναβάθμισε την αίσθηση και την εμφάνιση του αυτοκινήτου σου. Συζητάμε τις επιλογές μεμβρανών που ταιριάζουν στις ανάγκες σου.</p>
+                        <p class="en-title"><?php echo esc_html( teamtakaros_content( 'services', 'service_3_english' ) ); ?></p>
+                        <h3 class="gr-title"><?php echo esc_html( teamtakaros_content( 'services', 'service_3_title' ) ); ?></h3>
+                        <p class="gr-desc"><?php echo esc_html( teamtakaros_content( 'services', 'service_3_description' ) ); ?></p>
                     </div>
 
                     <div class="service">
                         <span class="num">04</span>
-                        <p class="en-title">INTERIOR CARE</p>
-                        <h3 class="gr-title">Βιολογικοί καθαρισμοί</h3>
-                        <p class="gr-desc">Περιποίηση του εσωτερικού, των καθισμάτων και των υφασμάτινων επιφανειών. Για μια καμπίνα που χαίρεσαι να μπαίνεις.</p>
+                        <p class="en-title"><?php echo esc_html( teamtakaros_content( 'services', 'service_4_english' ) ); ?></p>
+                        <h3 class="gr-title"><?php echo esc_html( teamtakaros_content( 'services', 'service_4_title' ) ); ?></h3>
+                        <p class="gr-desc"><?php echo esc_html( teamtakaros_content( 'services', 'service_4_description' ) ); ?></p>
                         
                     </div>
                 </div>
@@ -107,12 +107,12 @@ get_header();
                 <div class="intro-article">
                     <div class="flex">
                         <div class="flex-left">
-                            <p class="par-intro">ΑΠΟ ΤΟ ΣΥΝΕΡΓΕΙΟ ΜΑΣ.</p>
-                            <h2>Η δουλειά μιλάει.</h2>
+                            <p class="par-intro"><?php echo esc_html( teamtakaros_content( 'work', 'intro' ) ); ?></p>
+                            <h2><?php echo esc_html( teamtakaros_content( 'work', 'heading' ) ); ?></h2>
                         </div>
 
                         <div class="flex-right">
-                             <p class="par-brand">Ξεχωριστές  <strong>ιδέες.</strong> Φωτογραφίες από το <br> Instagram της <strong>Team Takaros.</strong></p>
+                             <p class="par-brand"><?php echo teamtakaros_sanitize_inline_content( teamtakaros_content( 'work', 'description' ) ); ?></p>
                         </div>
 
                     </div>
@@ -133,7 +133,7 @@ get_header();
                     <article class="project" data-category="Ηχοσυστήματα">
                         <button
                             class="project-image"
-                            data-photo="<?php echo get_template_directory_uri(); ?>/assets/imgs/audi-audio.jpg' ?>"
+                            data-photo="<?php echo get_template_directory_uri(); ?>/assets/imgs/audi-audio.jpg"
                             data-caption="Custom ήχος. Προσωπικός χαρακτήρας."
                             data-source="https://www.instagram.com/teamtakaros_tripolis/p/DdR5V2WiAy0/"
                             aria-label="Μεγέθυνση: Audi · custom εσωτερικό"
@@ -475,50 +475,16 @@ get_header();
         </section>
 
 
-        <!-- <section class="team">
-            <div class="wraper">
-                <article class="team-article">
-                    <h2>Η ομάδα.</h2>
-                    <p>ΜΙΑ ΟΜΑΔΑ. ΜΙΑ ΔΥΝΑΜΗ. ΜΙΑ ΚΟΡΥΦΗ.</p>
-                </article>
-            
-            
-                <div class="members">
-                    <div class="member">
-                        <img src="/<?php echo get_template_directory_uri(); ?>/assets/imgs/team-1.jpg" alt="">
-                        <p>Παναγιώτης Ζαχαρόπουλος</p>
-                    </div>
-
-                    <div class="member">
-                        <img src="/<?php echo get_template_directory_uri(); ?>/assets/imgs/team-2.jpg" alt="">
-                        <p>Πάνος Κουρούμαλος</p>
-                    </div>
-
-                    <div class="member">
-                        <img src="/<?php echo get_template_directory_uri(); ?>/assets/imgs/team-3.jpg" alt="">
-                        <p>Τάκης Τσιακανίκος</p>
-                    </div>
-
-                </div>
-            </div>
-        </section> -->
-
         <section class="about-us" id="about-us">
             <div class="wraper">
-                <h2>Σχετικά με εμάς.</h2>
+                <h2><?php echo esc_html( teamtakaros_content( 'about', 'heading' ) ); ?></h2>
 
                 <div class="about-us-flex">
                     <div class="about-us-flex-left">
                         <article class="about-us-article">
-                            <h3>Team Takaros — Sound Systems and More</h3>
+                            <h3><?php echo esc_html( teamtakaros_content( 'about', 'subheading' ) ); ?></h3>
 
-                            <p>Στο Team Takaros πιστεύουμε πως κάθε αυτοκίνητο <strong>αξίζει</strong> να έχει τη δική του ξεχωριστή <strong>ταυτότητα.</strong> 
-                                 Με έδρα την Τρίπολη, δραστηριοποιούμαστε στον χώρο της αυτοκίνησης, προσφέροντας <strong>εξειδικευμένες</strong>
-                                  υπηρεσίες σε ταπετσαρίες και επενδύσεις εσωτερικού, premium ηχοσυστήματα, αντηλιακές μεμβράνες,
-                                  βιολογικούς καθαρισμούς, συνδυάζοντας <strong>υψηλή αισθητική</strong> , σύγχρονη τεχνολογία και <strong>άρτια τεχνική</strong> κατάρτιση. 
-                                  
-                                  Από την επιλογή των υλικών μέχρι την τελευταία λεπτομέρεια της εγκατάστασης, κάθε project αντιμετωπίζεται με  <strong>απόλυτη προσοχή</strong>
-                                  και εξατομικεύεται στις <strong>ανάγκες</strong> και την <strong>αισθητική</strong> του κάθε πελάτη.</p>
+                            <p><?php echo teamtakaros_sanitize_inline_content( teamtakaros_content( 'about', 'description' ) ); ?></p>
                         </article>
                         
 
@@ -535,8 +501,8 @@ get_header();
         <section class="contact-us" id="contact-us">
             <div class="wraper">
                 <article class="intro-article">
-                    <p class="par-intro">ΤΟ ΟΝΕΙΡΕΥΤΗΚΑΤΕ ΑΣ ΤΟ ΦΤΙΑΞΟΥΜΕ</p>
-                    <h2>Επικοινωνήστε Μαζί μας.</h2>
+                    <p class="par-intro"><?php echo esc_html( teamtakaros_content( 'contact', 'intro' ) ); ?></p>
+                    <h2><?php echo esc_html( teamtakaros_content( 'contact', 'heading' ) ); ?></h2>
                 
                     
                 </article>
@@ -552,10 +518,10 @@ get_header();
                        <article>
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/logo.jpg" alt="">
                             <div class="contact-article-content">
-                                <p>Η Team Takaros Tripolis είναι πάντα ανοιχτή σε νέες ιδέες, συνεργασίες και ανθρώπους που μοιράζονται το ίδιο πάθος για την αυτοκίνηση και τα ηχοσυστήματα.</p>
-                                <p class="contact-channel"><i class="fa-solid fa-phone"></i>+30 698 479 5793</p>
-                                <p class="contact-channel"><i class="fa-solid fa-envelope"></i>teamtakaros@gmail.com</p>
-                                <p class="contact-channel"><i class="fa-solid fa-location-dot"></i>3ο Χλμ. Ε.Ο. Τριπολης Σπαρτης, Trípoli, Greece</p>
+                                <p><?php echo esc_html( teamtakaros_content( 'contact', 'description' ) ); ?></p>
+                                <p class="contact-channel"><i class="fa-solid fa-phone"></i><?php echo esc_html( teamtakaros_content( 'contact', 'phone' ) ); ?></p>
+                                <p class="contact-channel"><i class="fa-solid fa-envelope"></i><?php echo esc_html( teamtakaros_content( 'contact', 'email' ) ); ?></p>
+                                <p class="contact-channel"><i class="fa-solid fa-location-dot"></i><?php echo esc_html( teamtakaros_content( 'contact', 'address' ) ); ?></p>
                             </div>
 
                            
@@ -563,8 +529,8 @@ get_header();
                         </article>
 
                         <div class="social">
-                            <a class="fb" target="_blank" href="https://www.facebook.com/TeamTakaros/"><i class="fa-brands fa-square-facebook"></i></a>
-                            <a href="https://www.instagram.com/teamtakaros_tripolis/" class="insta" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                            <a class="fb" target="_blank" href="<?php echo esc_url( teamtakaros_content( 'contact', 'facebook' ) ); ?>"><i class="fa-brands fa-square-facebook"></i></a>
+                            <a href="<?php echo esc_url( teamtakaros_content( 'contact', 'instagram' ) ); ?>" class="insta" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
                         </div>
                    
                     </div>

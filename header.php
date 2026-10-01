@@ -38,8 +38,8 @@
             <div class="logo">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/logo.jpg" alt="" class="logo-img">
                 <div class="tagline">
-                    <h1>TEAM <span class="emf">TAKAROS</span></h1>
-                    <p>CAR AUDIO & CUSTOM INTERIORS</p>
+                    <h1><?php echo teamtakaros_sanitize_inline_content( teamtakaros_content( 'header', 'brand' ) ); ?></h1>
+                    <p><?php echo esc_html( teamtakaros_content( 'header', 'tagline' ) ); ?></p>
                 </div>
             </div>
 
@@ -53,13 +53,13 @@
                 <ul class="main-menu">
                     <li><a href="#services">Υπηρεσίες</a></li>
                     <li><a href="#our-work">Η δουλειά μας</a></li>
-                    <li><a href="#about-us">Σχετικά με εμάς</a></li> 
+                    <li><a href="#about-us">Σχετικά με εμάς</a></li>
                     <li><a href="#contact-us">Επικοινωνία</a></li>
                 </ul>
             </nav>
 
             <div class="contact-info">
-                <p><i class="fa-solid fa-phone"></i>+30 698 479 5793</p>
+                <p><i class="fa-solid fa-phone"></i><?php echo esc_html( teamtakaros_content( 'contact', 'phone' ) ); ?></p>
             </div>
 
         </div>
