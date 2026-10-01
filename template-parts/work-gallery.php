@@ -44,6 +44,6 @@ $gallery_tree = teamtakaros_gallery_tree();
 	<dialog id="photo-dialog" aria-label="Προβολή έργου">
 		<button type="button" class="close" aria-label="Κλείσιμο φωτογραφίας">×</button>
 		<img alt="" />
-			}
+			
 	</dialog>
 </div>
