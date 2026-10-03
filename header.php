@@ -24,6 +24,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+    <link rel="preload"
+      href="<?php echo get_template_directory_uri(); ?>/assets/imgs/cover-photo.webp"
+      as="image"
+      type="image/webp"
+      fetchpriority="high">
 	<?php wp_head(); ?>
 </head>
 
