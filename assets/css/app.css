@@ -389,6 +389,9 @@ img, video {
 .hidden {
   display: none; }
 
+.reviews {
+  background-color: whitesmoke; }
+
 .contact-us h2 {
   margin-bottom: 10px; }
 

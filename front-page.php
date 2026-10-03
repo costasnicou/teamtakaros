@@ -148,6 +148,16 @@ get_header();
             </div>
             
         </section>
+
+        <section class="reviews">
+            
+            <div class="wraper">
+                <h2 style="text-align:center;">Τι λένε για μας.</h2>
+                <?php echo apply_shortcodes( '[trustindex no-registration=google]' ); ?>
+            </div>
+            
+            
+        </section>
         
         <section class="contact-us" id="contact-us">
             <div class="wraper">
@@ -195,7 +205,6 @@ get_header();
 
         <a href="" class="to-top-link"><i class="fa-solid fa-circle-chevron-up"></i></a>
     </main>
-
 
 
 
