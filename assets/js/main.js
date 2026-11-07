@@ -1,3 +1,49 @@
+// Pause the homepage music when the YouTube video starts playing.
+(() => {
+  const iframe = document.getElementById('home-youtube-player');
+  const playlist = document.querySelector('.home-playlist');
+  if (!iframe || !playlist) return;
+
+  const source = new URL(iframe.src);
+  source.searchParams.set('enablejsapi', '1');
+  source.searchParams.set('origin', window.location.origin);
+  iframe.src = source.href;
+
+  let initialized = false;
+  const initialize = () => {
+    if (initialized || !window.YT?.Player) return;
+    initialized = true;
+    new window.YT.Player(iframe, {
+      events: {
+        onStateChange: (event) => {
+          if (event.data !== window.YT.PlayerState.PLAYING) return;
+          // Query at playback time: WordPress may have enhanced the audio element.
+          playlist.querySelectorAll('audio').forEach((audio) => audio.pause());
+        },
+      },
+    });
+  };
+
+  if (window.YT?.Player) {
+    initialize();
+  } else {
+    const previousReady = window.onYouTubeIframeAPIReady;
+    window.onYouTubeIframeAPIReady = () => {
+      try {
+        if (typeof previousReady === 'function') previousReady();
+      } finally {
+        initialize();
+      }
+    };
+    if (!document.querySelector('script[src="https://www.youtube.com/iframe_api"]')) {
+      const script = document.createElement('script');
+      script.src = 'https://www.youtube.com/iframe_api';
+      script.async = true;
+      document.head.appendChild(script);
+    }
+  }
+})();
+
 // Keep the menu usable without JavaScript; enhance it once the controls exist.
 (() => {
   const header = document.querySelector('.site-header');
