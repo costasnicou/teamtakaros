@@ -46,6 +46,8 @@ get_header();
             </div>
         </div>
 
+        <?php get_template_part( 'template-parts/home-playlist' ); ?>
+
         <section class="services-detail" id="services">
             <div class="wraper">
                 <div class="intro-article">

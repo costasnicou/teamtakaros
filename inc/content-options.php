@@ -309,6 +309,9 @@ function teamtakaros_register_content_options() {
 				'desc' => '<a href="' . esc_url( admin_url( 'edit-tags.php?taxonomy=tt_work_tab&post_type=attachment' ) ) . '">' . esc_html__( 'Manage gallery tabs and upload photos', 'teamtakaros' ) . '</a>',
 			) );
 		}
+		if ( 'hero' === $section ) {
+			teamtakaros_playlist_fields( $box );
+		}
 		foreach ( $settings['fields'] as $key => $definition ) {
 			$format = $definition['format'];
 			$field = array(

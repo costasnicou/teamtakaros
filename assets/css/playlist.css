@@ -1,0 +1,23 @@
+.home-playlist {
+  padding: 28px 0;
+  background: #f7f7f7;
+  border-bottom: 3px solid whitesmoke;
+}
+.home-playlist h2 {
+  margin: 0 0 8px;
+  font-size: clamp(24px, 3vw, 36px);
+}
+.home-playlist p { margin: 0 0 16px; }
+.home-playlist .wp-playlist {
+  margin: 0;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  text-align: left;
+}
+.home-playlist .wp-playlist-current-item { display: none; }
+.home-playlist a:focus-visible,
+.home-playlist button:focus-visible {
+  outline: 2px solid #a62121;
+  outline-offset: 2px;
+}

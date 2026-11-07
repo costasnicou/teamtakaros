@@ -191,5 +191,8 @@ require get_template_directory() . '/inc/access-control.php';
 /** Editable site text powered by CMB2. */
 require get_template_directory() . '/inc/content-options.php';
 
+/** Homepage audio playlist managed alongside the hero content. */
+require get_template_directory() . '/inc/playlist.php';
+
 /** Dashboard-managed gallery tabs and photo collections. */
 require get_template_directory() . '/inc/gallery.php';
